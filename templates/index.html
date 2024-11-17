@@ -1,19 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
+    <h1>{{ title }}</h1>
+    <p>Welcome to your Flask application!</p>
+    
+    <!-- First Form: Search Wikipedia -->
+    <form action="/search" method="POST">
+        <input type="text" name="query" placeholder="Search Wikipedia..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Second Form: Submit Feedback -->
+    <form action="/search" method="POST">
+        <input type="text" name="feedback" placeholder="Write your feedback..." required>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <!-- Random Wikipedia Article Section -->
+    <div class="random-article">
+        <h2>Random Article of the Day</h2>
+        <a href="/random_article" class="random-article-link">Click here for a random article</a>
     </div>
 </body>
-
 </html>

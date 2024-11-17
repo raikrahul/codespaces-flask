@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Article - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <h1>Random Wikipedia Article: "{{ title }}"</h1>
+
+    <!-- Display Random Article Details -->
+    <div class="random-article">
+        <h2>{{ title }}</h2>
+        <p>{{ snippet|safe }}</p>
+        <a href="https://en.wikipedia.org/wiki/{{ title }}" target="_blank">Read Full Article</a>
+    </div>
+
+    <!-- Button to load a new random article -->
+    <form action="/random_article" method="get">
+        <button type="submit">Get Another Random Article</button>
+    </form>
+
+    <!-- Link to go back to the search page -->
+    <a href="/">Back to Search</a>
+</body>
+</html>

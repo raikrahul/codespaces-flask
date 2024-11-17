@@ -1,45 +1,103 @@
+/* General body styling */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, sans-serif;
+    background-color: #0e2433;
+    color: #ffffff;
+    margin: 20px;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+/* Heading styling */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
 }
 
-.App {
-    text-align: center;
+/* Styling the search form and feedback form */
+form {
+    margin-bottom: 20px;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Styling the input and button elements */
+input, button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+/* Button styles */
+button {
+    background-color: #0066cc;
     color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.App-link {
-    color: #61dafb;
+/* Hover effect for buttons */
+button:hover {
+    background-color: #004d99;
 }
 
-.heart {
-    color: #ff0000;
+/* Styling the result cards */
+.result-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.small {
-    font-size: 0.75rem;
+/* Hover effects for cards */
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the result title (links) */
+.result-title {
+    font-size: 18px;
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Hover effect for links */
+.result-title:hover {
+    color: #004d99;
+    text-decoration: underline;
+}
+
+/* Styling the snippet text */
+.result-snippet {
+    font-size: 14px;
+    color: #333333;
+    margin-top: 8px;
+}
+
+/* Remove default bullet points */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Adjust spacing between cards */
+li {
+    margin-bottom: 15px;
+}
+
+/* Make design responsive */
+@media (max-width: 600px) {
+    .result-card {
+        padding: 10px;
+    }
+    .result-title {
+        font-size: 16px;
+    }
+    .result-snippet {
+        font-size: 12px;
+    }
 }
